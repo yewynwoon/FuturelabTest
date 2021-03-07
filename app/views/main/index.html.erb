@@ -2,9 +2,21 @@
 <div class ="center">
 <h1>Woon Ye Wyn</h1>
 </div>
+<h1>Education</h1>
 <ul>
-  <li><a class="active" href="#home">Education</a></li>
-  <li><a href="#news">Experience</a></li>
+<% @educations.each do |education| %>
+  <li>
+    <h2><%= education.title %></h2>
+    <p><%= education.body %></p>
+  </li>
+<% end %>
+<h1>Experience</h1>
+<% @experiences.each do |experience| %>
+  <li>
+    <h2><%= experience.title %></h2>
+    <p><%= experience.description %></p>
+  </li>
+<% end %>
   <li><a href="#contact">Skills</a></li>
 </ul>
 
