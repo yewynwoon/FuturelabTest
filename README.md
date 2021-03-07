@@ -1,9 +1,4 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+# SETUP
 
 * Ruby version: ruby 2.7.2p137 (2020-10-01 revision 5445e04352) [x64-mingw32]
 
@@ -13,7 +8,7 @@ Things you may want to cover:
 
 * ...
 
-Each Education model contains a school
-Each Project model contains a project
-Each Skill model contains a language
-Each Experience model contains a job
+# Each Education model contains a school
+# Each Project model contains a project
+# Each Skill model contains a language
+# Each Experience model contains a job
