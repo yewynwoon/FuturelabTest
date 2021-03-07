@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_07_152243) do
+ActiveRecord::Schema.define(version: 2021_03_07_174755) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -26,6 +26,15 @@ ActiveRecord::Schema.define(version: 2021_03_07_152243) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "endorses", force: :cascade do |t|
+    t.string "edonrsee"
+    t.text "body"
+    t.integer "skill_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["skill_id"], name: "index_endorses_on_skill_id"
+  end
+
   create_table "experiences", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -39,4 +48,5 @@ ActiveRecord::Schema.define(version: 2021_03_07_152243) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "endorses", "skills"
 end

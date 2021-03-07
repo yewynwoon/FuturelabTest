@@ -6,9 +6,5 @@
 
 * Deployment instructions: The command 'rails s' can be used to start the server and display the web application
 
-* ...
-
-# Each Education model contains a school
-# Each Project model contains a project
-# Each Skill model contains a language
-# Each Experience model contains a job
+# BACKGROUND
+This web application contains four models; Education, Experience, Skill and Endorse. The Skill model is related to the Endorse model through a one to many relationship. The endorsing part was added to the application to show an understanding of model relationships. The actual commenting isn't implemented as it was only used to show a concept.

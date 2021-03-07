@@ -10,13 +10,31 @@
     <p><%= education.body %></p>
   </li>
 <% end %>
+</ul>
 <h1>Experience</h1>
+<ul>
 <% @experiences.each do |experience| %>
   <li>
     <h2><%= experience.title %></h2>
     <p><%= experience.description %></p>
   </li>
 <% end %>
-  <li><a href="#contact">Skills</a></li>
 </ul>
+<h1>Skills</h1>
+<ul>
+<% @skills.each do |skill| %>
 
+<h2><%= skill.title %></h2>
+
+
+<h2>Endorse Skill:</h2>
+<%= form_with model: [ skill, skill.endorses.build ] do |form| %>
+  <p>
+    <%= form.text_area :body %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+<% end %>
+</ul>
